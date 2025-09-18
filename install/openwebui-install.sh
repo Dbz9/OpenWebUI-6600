@@ -14,20 +14,46 @@ setting_up_container
 network_check
 update_os
 
+# ------------------------------
+# Installing Dependencies
+# ------------------------------
 msg_info "Installing Dependencies"
 $STD apt-get install -y \
   git \
-  ffmpeg
-msg_ok "Installed Dependencies"
+  ffmpeg \
+  curl \
+  wget \
+  htop \
+  neofetch \
+  software-properties-common \
+  gnupg \
+  lsb-release \
+  python3-setuptools \
+  python3-wheel
 
+$STD sudo usermod -a -G render,video $LOGNAME
+$STD echo 'ADD_EXTRA_GROUPS=1' | sudo tee -a /etc/adduser.conf
+$STD echo 'EXTRA_GROUPS=video' | sudo tee -a /etc/adduser.conf
+$STD echo 'EXTRA_GROUPS=render' | sudo tee -a /etc/adduser.conf
+msg_ok "Installed Dependencies and configured GPU access"
+
+# ------------------------------
+# Setup Python3
+# ------------------------------
 msg_info "Setup Python3"
 $STD apt-get install -y --no-install-recommends \
   python3 \
   python3-pip
 msg_ok "Setup Python3"
 
+# ------------------------------
+# Install Node.js
+# ------------------------------
 NODE_VERSION="22" setup_nodejs
 
+# ------------------------------
+# Installing Open WebUI
+# ------------------------------
 msg_info "Installing Open WebUI (Patience)"
 $STD git clone https://github.com/open-webui/open-webui.git /opt/open-webui
 cd /opt/open-webui/backend
@@ -45,12 +71,15 @@ export NODE_OPTIONS="--max-old-space-size=3584"
 $STD npm run build
 msg_ok "Installed Open WebUI"
 
+# ------------------------------
+# Installing Ollama with ROCm
+# ------------------------------
 read -r -p "${TAB3}Would you like to add Ollama? <y/N> " prompt
 if [[ ${prompt,,} =~ ^(y|yes)$ ]]; then
-  msg_info "Installing Ollama"
-  curl --http1.1 -C - -fsSLO https://ollama.com/download/ollama-linux-amd64.tgz
-  tar -C /usr -xzf ollama-linux-amd64.tgz
-  rm -rf ollama-linux-amd64.tgz
+  msg_info "Installing Ollama ROCm"
+  curl --http1.1 -C - -fsSLO https://ollama.com/download/ollama-linux-amd64-rocm.tgz
+  tar -C /usr -xzf ollama-linux-amd64-rocm.tgz
+  rm -rf ollama-linux-amd64-rocm.tgz
   cat <<EOF >/etc/systemd/system/ollama.service
 [Unit]
 Description=Ollama Service
@@ -61,17 +90,26 @@ Type=exec
 ExecStart=/usr/bin/ollama serve
 Environment=HOME=$HOME
 Environment=OLLAMA_HOST=0.0.0.0
+Environment=HSA_OVERRIDE_GFX_VERSION=10.3.0
+Environment=ROCR_VISIBLE_DEVICES=0
+Environment=HIP_VISIBLE_DEVICES=0
 Restart=always
 RestartSec=3
 
 [Install]
 WantedBy=multi-user.target
 EOF
+
+  systemctl daemon-reload
   systemctl enable -q --now ollama
   sed -i 's/ENABLE_OLLAMA_API=false/ENABLE_OLLAMA_API=true/g' /opt/open-webui/.env
-  msg_ok "Installed Ollama"
+
+  msg_ok "Installed Ollama ROCm"
 fi
 
+# ------------------------------
+# Create Open WebUI systemd service
+# ------------------------------
 msg_info "Creating Service"
 cat <<EOF >/etc/systemd/system/open-webui.service
 [Unit]

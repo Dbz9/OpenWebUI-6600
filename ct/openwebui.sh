@@ -36,11 +36,12 @@ function update_script() {
       msg_info "Stopping Service"
       systemctl stop ollama
       msg_ok "Stopped Service"
-      curl --http1.1 -C - -fsSLO https://ollama.com/download/ollama-linux-amd64.tgz
+      # <-- Updated to ROCm version -->
+      curl --http1.1 -C - -fsSLO https://ollama.com/download/ollama-linux-amd64-rocm.tgz
       rm -rf /usr/lib/ollama
       rm -rf /usr/bin/ollama
-      tar -C /usr -xzf ollama-linux-amd64.tgz
-      rm -rf ollama-linux-amd64.tgz
+      tar -C /usr -xzf ollama-linux-amd64-rocm.tgz
+      rm -rf ollama-linux-amd64-rocm.tgz
       msg_info "Starting Service"
       systemctl start ollama
       msg_info "Started Service"
