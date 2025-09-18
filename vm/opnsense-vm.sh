@@ -2,9 +2,9 @@
 
 # Copyright (c) 2021-2025 Dbz9 ORG
 # Author: michelroegl-brunner
-# License: MIT | https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# License: MIT | https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 
-source /dev/stdin <<<$(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-amd64/main/misc/api.func)
+source /dev/stdin <<<$(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-6600/main/misc/api.func)
 
 function header_info {
   clear
@@ -626,15 +626,15 @@ DESCRIPTION=$(
   
   <span style='margin: 0 10px;'>
     <i class="fa fa-github fa-fw" style="color: #f5f5f5;"></i>
-    <a href='https://github.com/Dbz9/OpenWebUI-amd64' target='_blank' rel='noopener noreferrer' style='text-decoration: none; color: #00617f;'>GitHub</a>
+    <a href='https://github.com/Dbz9/OpenWebUI-6600' target='_blank' rel='noopener noreferrer' style='text-decoration: none; color: #00617f;'>GitHub</a>
   </span>
   <span style='margin: 0 10px;'>
     <i class="fa fa-comments fa-fw" style="color: #f5f5f5;"></i>
-    <a href='https://github.com/Dbz9/OpenWebUI-amd64/discussions' target='_blank' rel='noopener noreferrer' style='text-decoration: none; color: #00617f;'>Discussions</a>
+    <a href='https://github.com/Dbz9/OpenWebUI-6600/discussions' target='_blank' rel='noopener noreferrer' style='text-decoration: none; color: #00617f;'>Discussions</a>
   </span>
   <span style='margin: 0 10px;'>
     <i class="fa fa-exclamation-circle fa-fw" style="color: #f5f5f5;"></i>
-    <a href='https://github.com/Dbz9/OpenWebUI-amd64/issues' target='_blank' rel='noopener noreferrer' style='text-decoration: none; color: #00617f;'>Issues</a>
+    <a href='https://github.com/Dbz9/OpenWebUI-6600/issues' target='_blank' rel='noopener noreferrer' style='text-decoration: none; color: #00617f;'>Issues</a>
   </span>
 </div>
 EOF

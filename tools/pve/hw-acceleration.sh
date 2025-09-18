@@ -3,9 +3,9 @@
 # Copyright (c) 2021-2025 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 # Execute within the Proxmox shell
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-amd64/main/tools/pve/hw-acceleration.sh)"
+# bash -c "$(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-6600/main/tools/pve/hw-acceleration.sh)"
 
 set -e
 function header_info {

@@ -11,7 +11,7 @@
   "interface_port": 5005,
   "documentation": null,
   "website": "https://github.com/PCJones/UmlautAdaptarr",
-  "logo": "https://raw.githubusercontent.com/Dbz9/OpenWebUI-amd64/refs/heads/main/misc/images/logo.png",
+  "logo": "https://raw.githubusercontent.com/Dbz9/OpenWebUI-6600/refs/heads/main/misc/images/logo.png",
   "config_path": "/opt/UmlautAdaptarr/appsettings.json",
   "description": "UmlautAdaptarr is a tool that fixes issues with how Sonarr, Radarr, Lidarr, and Readarr handle foreign languages. It sits between these apps and the indexers, changing searches and results, and renaming releases so the apps recognize them correctly.",
   "install_methods": [

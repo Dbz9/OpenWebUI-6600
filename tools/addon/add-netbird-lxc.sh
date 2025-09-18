@@ -4,7 +4,7 @@
 # Author: tteck (tteckster)
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 
 function header_info {
   clear

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-amd64/main/misc/build.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-6600/main/misc/build.func)
 # Source: https://github.com/gristlabs/grist-core
 
 APP="Grist"

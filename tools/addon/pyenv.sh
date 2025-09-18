@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2025 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 
 set -e
 YW=$(echo "\033[33m")
@@ -116,7 +116,7 @@ if [[ "${prompt,,}" =~ ^(y|yes)$ ]]; then
 # Copyright (c) 2021-2025 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 
 source /srv/esphome/bin/activate
 esphome dashboard /srv/esphome/

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-amd64/main/misc/build.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-6600/main/misc/build.func)
 # Copyright (c) 2021-2025 Dbz9 ORG
 # Author: CrazyWolf13
-# License: MIT | https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# License: MIT | https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 # Source: https://homarr.dev/
 
 APP="homarr"
@@ -31,7 +31,7 @@ function update_script() {
   if [[ -f /opt/homarr/database/db.sqlite ]]; then
     msg_error "Old Homarr detected due to existing database file (/opt/homarr/database/db.sqlite)."
     msg_error "Update not supported. Refer to:"
-    msg_error " - https://github.com/Dbz9/OpenWebUI-amd64/discussions/1551"
+    msg_error " - https://github.com/Dbz9/OpenWebUI-6600/discussions/1551"
     msg_error " - https://homarr.dev/docs/getting-started/after-the-installation/#importing-a-zip-from-version-before-100"
     exit 1
   fi

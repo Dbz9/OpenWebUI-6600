@@ -78,7 +78,7 @@ A comprehensive, user-friendly interface built with Next.js that provides access
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/Dbz9/OpenWebUI-amd64.git
+   git clone https://github.com/Dbz9/OpenWebUI-6600.git
    cd ProxmoxVE/frontend
    ```
 
@@ -266,15 +266,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📚 Additional Resources
 
 - **[Proxmox VE Documentation](https://pve.proxmox.com/pve-docs/)**
-- **[Community Scripts Repository](https://github.com/Dbz9/OpenWebUI-amd64)**
+- **[Community Scripts Repository](https://github.com/Dbz9/OpenWebUI-6600)**
 - **[Discord Community](https://discord.gg/2wvnMDgdnU)**
-- **[GitHub Discussions](https://github.com/Dbz9/OpenWebUI-amd64/discussions)**
+- **[GitHub Discussions](https://github.com/Dbz9/OpenWebUI-6600/discussions)**
 
 ## 🔗 Links
 
 - **🌐 Live Website**: [https://Dbz9.github.io/ProxmoxVE/](https://Dbz9.github.io/ProxmoxVE/)
 - **💬 Discord Server**: [https://discord.gg/2wvnMDgdnU](https://discord.gg/2wvnMDgdnU)
-- **📝 Change Log**: [https://github.com/Dbz9/OpenWebUI-amd64/blob/main/CHANGELOG.md](https://github.com/Dbz9/OpenWebUI-amd64/blob/main/CHANGELOG.md)
+- **📝 Change Log**: [https://github.com/Dbz9/OpenWebUI-6600/blob/main/CHANGELOG.md](https://github.com/Dbz9/OpenWebUI-6600/blob/main/CHANGELOG.md)
 
 ---
 

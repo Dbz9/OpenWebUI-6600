@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2025 tteck
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
-# License: MIT | https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# License: MIT | https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 # Source: https://www.mysql.com/products/community | https://www.phpmyadmin.net
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

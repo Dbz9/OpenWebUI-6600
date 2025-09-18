@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Copyright (c) 2021-2025 Dbz9 ORG
 # Author: kristocopani
-# License: MIT | https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# License: MIT | https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 # Source: https://www.jenkins.io/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2025 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 
 function header_info {
   clear
@@ -89,5 +89,5 @@ EOF
 echo -e "\e[1;33m \nFinished....Reboot ${CTID} LXC to apply the changes.\n \e[0m"
 
 # In the Proxmox web shell run
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-amd64/main/tools/pve/frigate-support.sh)"
+# bash -c "$(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-6600/main/tools/pve/frigate-support.sh)"
 # Reboot the LXC to apply the changes

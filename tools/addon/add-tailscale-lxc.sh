@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2025 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# License: MIT | https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 
 set -Eeuo pipefail
 trap 'echo -e "\n[ERROR] in line $LINENO: exit code $?"' ERR

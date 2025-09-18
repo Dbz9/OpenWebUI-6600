@@ -2,7 +2,7 @@
 
 # Copyright (c) 2025 Community Scripts ORG
 # Author: vhsdream
-# License: MIT | https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# License: MIT | https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 # Source: https://github.com/kyantech/Palmr
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

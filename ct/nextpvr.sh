@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-amd64/main/misc/build.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-6600/main/misc/build.func)
 # Copyright (c) 2021-2025 Dbz9 ORG
 # Author: MickLesk (Canbiz)
 # License: MIT

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-amd64/main/misc/build.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-6600/main/misc/build.func)
 # Copyright (c) 2021-2025 Dbz9 ORG
 # Author: Kristian Skov
-# License: MIT | https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# License: MIT | https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 # Source: https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-9.0&tabs=linux-ubuntu
 
 APP="Dotnet ASP Web API"

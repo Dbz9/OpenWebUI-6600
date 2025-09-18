@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2025 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 
 # Use to copy all data from one Zigbee2MQTT LXC to another
 # run from the Proxmox Shell
@@ -128,4 +128,4 @@ info "Successfully Transferred Data."
 
 # Use to copy all data from one Zigbee2MQTT LXC to another
 # run from the Proxmox Shell
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-amd64/mainmain/tools/copy-data//z2m-copy-data-z2m.sh)"
+# bash -c "$(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-6600/mainmain/tools/copy-data//z2m-copy-data-z2m.sh)"

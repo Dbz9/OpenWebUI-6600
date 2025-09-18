@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2025 Dbz9 ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# License: MIT | https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 # Source: https://release-argus.io/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -51,15 +51,15 @@ service:
       icon_link_to: https://release-argus.io
       web_url: https://github.com/release-argus/Argus/blob/master/CHANGELOG.md
 
-  Dbz9/OpenWebUI-amd64:
+  Dbz9/OpenWebUI-6600:
     latest_version:
       type: github
-      url: Dbz9/OpenWebUI-amd64
+      url: Dbz9/OpenWebUI-6600
       use_prerelease: false
     dashboard:
-      icon: https://raw.githubusercontent.com/Dbz9/OpenWebUI-amd64/refs/heads/main/misc/images/logo.png
+      icon: https://raw.githubusercontent.com/Dbz9/OpenWebUI-6600/refs/heads/main/misc/images/logo.png
       icon_link_to: https://helper-scripts.com/
-      web_url: https://github.com/Dbz9/OpenWebUI-amd64/releases
+      web_url: https://github.com/Dbz9/OpenWebUI-6600/releases
 EOF
 msg_ok "Setup Config"
 

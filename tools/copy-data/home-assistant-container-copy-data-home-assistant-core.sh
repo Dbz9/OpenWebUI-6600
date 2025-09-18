@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2025 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/Dbz9/OpenWebUI-amd64/raw/main/LICENSE
+# https://github.com/Dbz9/OpenWebUI-6600/raw/main/LICENSE
 
 clear
 if ! command -v pveversion >/dev/null 2>&1; then
@@ -124,4 +124,4 @@ info "Successfully Transferred Data."
 
 # Use to copy all data from a Home Assistant Container LXC to a Home Assistant Core LXC
 # run from the Proxmox Shell
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-amd64/mainmain/tools/copy-data//home-assistant-container-copy-data-home-assistant-core.sh)"
+# bash -c "$(curl -fsSL https://raw.githubusercontent.com/Dbz9/OpenWebUI-6600/mainmain/tools/copy-data//home-assistant-container-copy-data-home-assistant-core.sh)"

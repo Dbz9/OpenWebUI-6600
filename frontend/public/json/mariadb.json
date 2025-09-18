@@ -9,7 +9,7 @@
   "updateable": true,
   "privileged": false,
   "interface_port": 3306,
-  "documentation": "https://github.com/Dbz9/OpenWebUI-amd64/discussions/192",
+  "documentation": "https://github.com/Dbz9/OpenWebUI-6600/discussions/192",
   "website": "https://mariadb.org/",
   "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/mariadb.webp",
   "config_path": "",
