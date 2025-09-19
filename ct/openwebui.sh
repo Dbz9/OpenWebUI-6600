@@ -19,6 +19,29 @@ variables
 color
 catch_errors
 
+# --- Safe download helper ---
+download_with_retries() {
+  local url="$1"
+  local max_retries=10
+  local count=0
+  local success=0
+
+  while [ $count -lt $max_retries ]; do
+    if curl --http1.1 --retry-all-errors --retry-delay 5 --retry 10 -C - -fsSLO "$url"; then
+      success=1
+      break
+    fi
+    count=$((count+1))
+    echo "❌ Download failed (attempt $count/$max_retries)... retrying in 5s"
+    sleep 5
+  done
+
+  if [ $success -eq 0 ]; then
+    echo "🚨 Failed to download $url after $max_retries attempts"
+    exit 1
+  fi
+}
+
 function update_script() {
   header_info
   check_container_storage
@@ -36,8 +59,8 @@ function update_script() {
       msg_info "Stopping Service"
       systemctl stop ollama
       msg_ok "Stopped Service"
-      # <-- Updated to ROCm version -->
-      curl --http1.1 --retry 5 --retry-delay 10 -C - -fsSLO https://ollama.com/download/ollama-linux-amd64-rocm.tgz
+      # <-- Updated to ROCm version with retries -->
+      download_with_retries "https://ollama.com/download/ollama-linux-amd64-rocm.tgz"
       rm -rf /usr/lib/ollama
       rm -rf /usr/bin/ollama
       tar -C /usr -xzf ollama-linux-amd64-rocm.tgz
