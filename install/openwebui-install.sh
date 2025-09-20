@@ -14,29 +14,6 @@ setting_up_container
 network_check
 update_os
 
-# --- Safe download helper ---
-download_with_retries() {
-  local url="$1"
-  local max_retries=10
-  local count=0
-  local success=0
-
-  while [ $count -lt $max_retries ]; do
-    if curl --http1.1 --retry-all-errors --retry-delay 5 --retry 10 -C - -fsSLO "$url"; then
-      success=1
-      break
-    fi
-    count=$((count+1))
-    echo "❌ Download failed (attempt $count/$max_retries)... retrying in 5s"
-    sleep 5
-  done
-
-  if [ $success -eq 0 ]; then
-    echo "🚨 Failed to download $url after $max_retries attempts"
-    exit 1
-  fi
-}
-
 # ------------------------------
 # Installing Dependencies
 # ------------------------------
@@ -100,7 +77,7 @@ msg_ok "Installed Open WebUI"
 read -r -p "${TAB3}Would you like to add Ollama? <y/N> " prompt
 if [[ ${prompt,,} =~ ^(y|yes)$ ]]; then
   msg_info "Installing Ollama ROCm"
-  download_with_retries "https://ollama.com/download/ollama-linux-amd64-rocm.tgz"
+  curl --http1.1 --retry 5 --retry-delay 10 -C - -fsSLO https://ollama.com/download/ollama-linux-amd64-rocm.tgz
   tar -C /usr -xzf ollama-linux-amd64-rocm.tgz
   rm -rf ollama-linux-amd64-rocm.tgz
   cat <<EOF >/etc/systemd/system/ollama.service
