@@ -37,7 +37,7 @@ function update_script() {
       systemctl stop ollama
       msg_ok "Stopped Service"
       # <-- Updated to ROCm version -->
-      curl -C - --http1.1 --no-alpn --retry 5 --retry-delay 5 - -fsSLO https://ollama.com/download/ollama-linux-amd64-rocm.tgz
+      curl -C - --http1.1 --no-alpn --retry 5 --retry-delay 5 -fsSLO https://ollama.com/download/ollama-linux-amd64-rocm.tgz
       rm -rf /usr/lib/ollama
       rm -rf /usr/bin/ollama
       tar -C /usr -xzf ollama-linux-amd64-rocm.tgz
