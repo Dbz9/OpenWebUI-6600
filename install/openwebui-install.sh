@@ -77,7 +77,7 @@ msg_ok "Installed Open WebUI"
 read -r -p "${TAB3}Would you like to add Ollama? <y/N> " prompt
 if [[ ${prompt,,} =~ ^(y|yes)$ ]]; then
   msg_info "Installing Ollama ROCm"
-  curl --http1.1 --retry 5 --retry-delay 10 -C - -fsSLO https://ollama.com/download/ollama-linux-amd64-rocm.tgz
+  curl -C - --http1.1 --no-alpn --retry 5 --retry-delay 5 - -fsSLO https://ollama.com/download/ollama-linux-amd64-rocm.tgz
   tar -C /usr -xzf ollama-linux-amd64-rocm.tgz
   rm -rf ollama-linux-amd64-rocm.tgz
   cat <<EOF >/etc/systemd/system/ollama.service
